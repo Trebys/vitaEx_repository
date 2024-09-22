@@ -1,9 +1,26 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Navbar } from "../src/widgets/layout";
+import routes from "../src/routes.jsx";
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  const { pathname } = useLocation();
+
+  return (
+    <>
+      {!(pathname == "/sign-in" || pathname == "/sign-up") && (
+        <div className="container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
+          <Navbar routes={routes} />
+        </div>
+      )}
+
+      <Routes>
+        {routes.map(
+          ({ path, element }, key) =>
+            element && <Route key={key} exact path={path} element={element} />
+        )}
+        <Route path="*" element={<Navigate to="/home" replace />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
