@@ -1,77 +1,64 @@
 export const teamData = [
   {
-    img: "/img/team-1.jpg",
-    name: "Ryan Tompson",
-    position: "Web Developer",
+    img: "/img/esteban_lopez.jpeg",
+    name: "Esteban López",
+    position: "Fundador y CEO",
     socials: [
-      {
-        color: "light-blue",
-        name: "twitter",
-      },
       {
         color: "blue",
         name: "linkedin",
       },
       {
         color: "pink",
-        name: "dribbble",
+        name: "researchgate",
       },
     ],
   },
   {
-    img: "/img/team-2.jpg",
-    name: "Romina Hadid",
-    position: "Marketing Specialist",
+    img: "/img/javier_menendez.jpg",
+    name: "Dr. Javier Menéndez",
+    position: "Investigador en Genética",
     socials: [
-      {
-        color: "light-blue",
-        name: "twitter",
-      },
       {
         color: "blue",
         name: "linkedin",
       },
       {
         color: "pink",
-        name: "dribbble",
+        name: "researchgate",
       },
     ],
   },
   {
-    img: "/img/team-3.jpg",
-    name: "Alexa Smith",
-    position: "UI/UX Designer",
+    img: "/img/sofia_garcia.jpg",
+    name: "Dra. Sofia García",
+    position: "Experta en Bioinformática",
     socials: [
-      {
-        color: "light-blue",
-        name: "twitter",
-      },
+
       {
         color: "blue",
         name: "linkedin",
       },
       {
         color: "pink",
-        name: "dribbble",
+        name: "researchgate",
       },
     ],
   },
   {
-    img: "/img/team-4.png",
-    name: "Jenna Kardi",
-    position: "Founder and CEO",
+    img: "/img/elena_martinez.jpg",
+    name: "Dr. Elena Martínez",
+    position: "Biotecnóloga Senior",
+
     socials: [
-      {
-        color: "light-blue",
-        name: "twitter",
-      },
+
       {
         color: "blue",
-        name: "facebook",
+        name: "linkedin",
       },
       {
         color: "pink",
-        name: "dribbble",
+        name: "researchgate",
       },
     ],
   },

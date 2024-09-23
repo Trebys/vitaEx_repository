@@ -2,7 +2,7 @@ import { Home } from "./pages";
 
 export const routes = [
   {
-    name: "home",
+    name: "Inicio",
     path: "/home",
     element: <Home />,
   },

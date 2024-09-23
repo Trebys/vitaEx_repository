@@ -19,27 +19,43 @@ export function Home() {
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('/img/background-3.png')] bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-[url('/img/womes_background.jpg')] bg-cover bg-center" />
         <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
               <Typography
                 variant="h1"
-                color="white"
-                className="mb-6 font-black"
+                color="green"
+                className="mb-6 font-extrabold"
+                style={
+                  {
+                    // Soporte general de navegadores
+                  }
+                }
               >
-                VitaEx Labs.
+                VitaEx Labs
               </Typography>
-              <Typography variant="lead" color="white" className="opacity-80">
-                This is a simple example of a Landing Page you can build using
-                Material Tailwind. It features multiple components based on the
-                Tailwind CSS and Material Design by Google.
+              <Typography
+                variant="lead"
+                color="white"
+                className="font-bold opacity-80"
+                style={{
+                  WebkitTextStroke: "0.7px black",
+                  textStroke: "0.7px black",
+                }}
+              >
+                En VitaEx Labs, nuestra misión es prolongar y mejorar la calidad
+                de vida a través de soluciones innovadoras de biotecnología y
+                longevidad, permitiendo a las personas vivir más y mejor.
               </Typography>
             </div>
           </div>
         </div>
       </div>
+
+      {/*Arriba de features*/}
+
       <section className="-mt-32 bg-white px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -57,7 +73,7 @@ export function Home() {
           </div>
           <div className="mt-32 flex flex-wrap items-center">
             <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-gray-900 p-2 text-center shadow-lg">
+              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-green-500 p-2 text-center shadow-lg">
                 <FingerPrintIcon className="h-8 w-8 text-white " />
               </div>
               <Typography
@@ -65,48 +81,51 @@ export function Home() {
                 className="mb-3 font-bold"
                 color="blue-gray"
               >
-                Working with us is a pleasure
+                Servicios
               </Typography>
-              <Typography className="mb-8 font-normal text-blue-gray-500">
-                Don't let your uses guess by attaching tooltips and popoves to
-                any element. Just make sure you enable them first via
-                JavaScript.
-                <br />
-                <br />
-                The kit comes with three pre-built pages to help you get started
-                faster. You can change the text and images and you're good to
-                go. Just make sure you enable them first via JavaScript.
+              <Typography className="mb-8 font-normal text-gray-800">
+                Ofrecemos una variedad de productos y servicios enfocados en
+                prolongar la salud y mejorar la longevidad, incluyendo terapias
+                genéticas, suplementos personalizados y tratamientos
+                regenerativos avanzados.
               </Typography>
-              <Button variant="filled">read more</Button>
+              <Button color="green" variant="filled">
+                Conoce más
+              </Button>
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
-              <Card className="shadow-lg border shadow-gray-500/10 rounded-lg">
+              <Card className="shadow-lg border bg-black rounded-lg">
                 <CardHeader floated={false} className="relative h-56">
                   <img
                     alt="Card Image"
-                    src="/img/teamwork.png"
+                    src="/img/background_men.jpg"
                     className="h-full w-full"
                   />
                 </CardHeader>
                 <CardBody>
                   <Typography
                     variant="small"
-                    color="blue-gray"
+                    color="white"
                     className="font-normal"
                   >
-                    Enterprise
+                    Especialistas
                   </Typography>
                   <Typography
                     variant="h5"
-                    color="blue-gray"
+                    color="white"
                     className="mb-3 mt-2 font-bold"
                   >
-                    Top Notch Services
+                    Investigación y Tratamientos de Calidad
                   </Typography>
-                  <Typography className="font-normal text-blue-gray-500">
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens.
+                  <Typography
+                    className="font-normal text-gray-500"
+                    color="white"
+                  >
+                    Nuestros especialistas emplean los más altos estándares de
+                    cuidado y las herramientas más avanzadas en sus
+                    investigaciones y tratamientos. Además, nos mantenemos al
+                    día con las últimas tecnologías y las mejores prácticas en
+                    el campo de la biotecnología y la longevidad.
                   </Typography>
                 </CardBody>
               </Card>
@@ -114,12 +133,100 @@ export function Home() {
           </div>
         </div>
       </section>
+      {/*Abajo de servicios*/}
+      <section className="bg-white px-4 pb-32 pt-16">
+        {" "}
+        {/* Espacio ajustado con pb-32 */}
+        <div className="container mx-auto text-center">
+          <Typography
+            variant="h3"
+            className="mb-3 font-bold text-blue-gray-900"
+          >
+            Nuestra Misión, Visión y Reseña Histórica
+          </Typography>
+          <Typography variant="h5" color="blue-gray" className="mb-8">
+            <span className="font-extrabold text-green-500">VitaEx Labs</span>{" "}
+            combina "Vita" (vida en latín) con "Ex" para expansión, sugiriendo
+            la prolongación de la vida.
+          </Typography>
+          <Typography
+            variant="h6"
+            className="italic text-gray-600 mb-8"
+            color="blue-gray"
+          >
+            "Live more, enjoy more"
+          </Typography>
+
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-2">
+            <Card className="shadow-lg border bg-green-50 rounded-lg">
+              <CardBody>
+                <Typography variant="h4" className="font-bold text-green-700">
+                  Misión
+                </Typography>
+                <Typography className="mt-4 text-gray-600">
+                  En VitaEx Labs, nuestra misión es prolongar y mejorar la
+                  calidad de vida de las personas a través de la investigación
+                  científica avanzada en biotecnología y longevidad. Nos
+                  comprometemos a desarrollar soluciones innovadoras que
+                  permitan a nuestros clientes vivir más tiempo, con plena
+                  vitalidad, para disfrutar de lo que más les apasiona.
+                </Typography>
+              </CardBody>
+            </Card>
+            <Card className="shadow-lg border bg-green-50 rounded-lg">
+              <CardBody>
+                <Typography variant="h4" className="font-bold text-green-700">
+                  Visión
+                </Typography>
+                <Typography className="mt-4 text-gray-600">
+                  Ser líderes mundiales en la investigación y aplicación de
+                  tecnologías de longevidad, revolucionando la forma en que las
+                  personas experimentan el envejecimiento y mejorando
+                  significativamente la salud global. Aspiramos a transformar
+                  vidas mediante el uso de biotecnología avanzada para aumentar
+                  la esperanza y calidad de vida.
+                </Typography>
+              </CardBody>
+            </Card>
+          </div>
+
+          {/* Nueva Card para la Reseña Histórica */}
+          <div className="mt-10">
+            <Card className="shadow-lg border bg-green-50 rounded-lg">
+              <CardBody>
+                <Typography variant="h4" className="font-bold text-green-700">
+                  Reseña Histórica
+                </Typography>
+                <Typography className="mt-4 text-gray-600">
+                  VitaEx Labs fue fundada en el año 2024 por Esteban López, un
+                  visionario apasionado por la biotecnología y la salud. La
+                  empresa nació como respuesta a la creciente demanda por
+                  soluciones científicas que no solo prolonguen la vida, sino
+                  que también mejoren su calidad. Tras varios años de
+                  investigación en áreas como la genética, la medicina
+                  preventiva y la regeneración celular, VitaEx Labs se
+                  estableció con el propósito de ofrecer tratamientos y terapias
+                  que revolucionen la longevidad humana.
+                  <br />
+                  Desde su fundación, VitaEx Labs ha colaborado con
+                  universidades, laboratorios y empresas de salud para avanzar
+                  en el campo de la biotecnología. Con un equipo altamente
+                  calificado y una red de asociaciones estratégicas, la empresa
+                  ha logrado posicionarse como una pionera en la investigación
+                  sobre longevidad y salud preventiva.
+                </Typography>
+              </CardBody>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section className="px-4 pt-20 pb-48">
         <div className="container mx-auto">
-          <PageTitle section="Our Team" heading="Here are our heroes">
-            According to the National Oceanic and Atmospheric Administration,
-            Ted, Scambos, NSIDClead scentist, puts the potentially record
-            maximum.
+          <PageTitle section="Nuestro Equipo" heading="Nuestros especialistas">
+            Nuestro equipo está comprometido en liderar la investigación y
+            desarrollo de tecnologías innovadoras que transformen la salud y
+            longevidad humana.
           </PageTitle>
           <div className="mt-24 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
             {teamData.map(({ img, name, position, socials }) => (
@@ -144,11 +251,15 @@ export function Home() {
       </section>
       <section className="relative bg-white py-24 px-4">
         <div className="container mx-auto">
-          <PageTitle section="Co-Working" heading="Build something">
-            Put the potentially record low maximum sea ice extent tihs year down
-            to low ice. According to the National Oceanic and Atmospheric
-            Administration, Ted, Scambos.
+          <PageTitle
+            section="Colaboración científica"
+            heading="Innovación en biotecnología"
+          >
+            Colaboramos con instituciones científicas de todo el mundo para
+            desarrollar tratamientos que revolucionan la longevidad y salud
+            preventiva.
           </PageTitle>
+
           <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
             {contactData.map(({ title, icon, description }) => (
               <Card
@@ -157,7 +268,7 @@ export function Home() {
                 shadow={false}
                 className="text-center text-blue-gray-900"
               >
-                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-blue-gray-900 shadow-lg shadow-gray-500/20">
+                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-green-600 shadow-lg shadow-gray-500/20">
                   {React.createElement(icon, {
                     className: "w-5 h-5 text-white",
                   })}
@@ -171,15 +282,21 @@ export function Home() {
               </Card>
             ))}
           </div>
-          <PageTitle section="Contact Us" heading="Want to work with us?">
-            Complete this form and we will get back to you in 24 hours.
+          <PageTitle
+            section="Contáctanos"
+            heading="¿Quieres trabajar con nosotros?"
+          >
+            Si estás interesado en colaborar o aprender más sobre nuestras
+            investigaciones en longevidad, completa este formulario y te
+            responderemos en 24 horas.
           </PageTitle>
+
           <form className="mx-auto w-full mt-12 lg:w-5/12">
             <div className="mb-8 flex gap-8">
-              <Input variant="outlined" size="lg" label="Full Name" />
-              <Input variant="outlined" size="lg" label="Email Address" />
+              <Input variant="outlined" size="lg" label="Nombre y Apellido" />
+              <Input variant="outlined" size="lg" label="Dirección de correo" />
             </div>
-            <Textarea variant="outlined" size="lg" label="Message" rows={8} />
+            <Textarea variant="outlined" size="lg" label="Mensaje" rows={8} />
             <Checkbox
               label={
                 <Typography
@@ -187,19 +304,19 @@ export function Home() {
                   color="gray"
                   className="flex items-center font-normal"
                 >
-                  I agree the
+                  Acepto los
                   <a
                     href="#"
                     className="font-medium transition-colors hover:text-gray-900"
                   >
-                    &nbsp;Terms and Conditions
+                    &nbsp;Terminos y Condiciones
                   </a>
                 </Typography>
               }
               containerProps={{ className: "-ml-2.5" }}
             />
             <Button variant="gradient" size="lg" className="mt-8" fullWidth>
-              Send Message
+              Enviar Mensaje
             </Button>
           </form>
         </div>

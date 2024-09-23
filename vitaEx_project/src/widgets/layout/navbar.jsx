@@ -9,6 +9,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import logo from "../../../public/img/vitaex_logo.jpeg"; // Asegúrate de que la ruta sea correcta
 
 export function Navbar({ brandName, routes, action }) {
   const [openNav, setOpenNav] = React.useState(false);
@@ -26,8 +27,8 @@ export function Navbar({ brandName, routes, action }) {
         <Typography
           key={name}
           as="li"
-          variant="small"
-          color="inherit"
+          variant="lead"
+          color="green"
           className="capitalize"
         >
           {href ? (
@@ -64,20 +65,19 @@ export function Navbar({ brandName, routes, action }) {
     <MTNavbar color="transparent" className="p-3">
       <div className="container mx-auto flex items-center justify-between text-white">
         <Link to="/">
-          <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold">
-            {brandName}
-          </Typography>
+          <img
+            src={logo}
+            alt="VitaEx Labs Logo"
+            className="h-16 w-16 rounded-3xl mr-4 ml-2 cursor-pointer"
+          />
         </Link>
+
         <div className="hidden lg:block">{navList}</div>
         <div className="hidden gap-2 lg:flex">
           <a
             href="https://www.material-tailwind.com/blocks?ref=mtkr"
             target="_blank"
-          >
-            <Button variant="text" size="sm" color="white" fullWidth>
-              pro version
-            </Button>
-          </a>
+          ></a>
           {React.cloneElement(action, {
             className: "hidden lg:inline-block",
           })}
@@ -106,11 +106,7 @@ export function Navbar({ brandName, routes, action }) {
             href="https://www.material-tailwind.com/blocks/react?ref=mtkr"
             target="_blank"
             className="mb-2 block"
-          >
-            <Button variant="text" size="sm" fullWidth>
-              pro version
-            </Button>
-          </a>
+          ></a>
           {React.cloneElement(action, {
             className: "w-full block",
           })}
@@ -121,14 +117,14 @@ export function Navbar({ brandName, routes, action }) {
 }
 
 Navbar.defaultProps = {
-  brandName: "Material Tailwind React",
+  brandName: "", // Ya no es necesario usar brandName porque estamos usando el logo
   action: (
     <a
       href="https://www.creative-tim.com/product/material-tailwind-kit-react"
       target="_blank"
     >
-      <Button variant="gradient" size="sm" fullWidth>
-        free download
+      <Button color="green" variant="gradient" size="sm" fullWidth>
+        Iniciar Sesión
       </Button>
     </a>
   ),

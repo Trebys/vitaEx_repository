@@ -1,27 +1,27 @@
 import {
   BriefcaseIcon,
-  ChartBarIcon,
-  PlayIcon,
+  AcademicCapIcon,
+  GlobeAltIcon,
 } from "@heroicons/react/24/solid";
 
 export const contactData = [
   {
-    title: "Excelent Services",
+    title: "Universidad de Cambridge",
+    icon: AcademicCapIcon,
+    description:
+      "Colaboramos con la Universidad de Cambridge para avanzar en terapias genéticas enfocadas en prolongar la longevidad humana y mejorar la salud preventiva.",
+  },
+  {
+    title: "MIT - Instituto de Tecnología de Massachusetts",
     icon: BriefcaseIcon,
     description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "A través de nuestra colaboración con el MIT, desarrollamos soluciones biotecnológicas de última generación que impactan en la salud celular y regenerativa.",
   },
   {
-    title: "Grow Your Market",
-    icon: ChartBarIcon,
+    title: "Organización Mundial de la Salud (OMS)",
+    icon: GlobeAltIcon,
     description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
-  },
-  {
-    title: "Launch Time",
-    icon: PlayIcon,
-    description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "Trabajamos junto a la OMS para aplicar buenas prácticas en biotecnología, asegurando que nuestras investigaciones sigan los estándares globales de salud y seguridad.",
   },
 ];
 
