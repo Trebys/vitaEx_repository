@@ -10,7 +10,12 @@ import {
   Textarea,
   Checkbox,
 } from "@material-tailwind/react";
-import { FingerPrintIcon, UsersIcon } from "@heroicons/react/24/solid";
+import {
+  FingerPrintIcon,
+  BeakerIcon,
+  GlobeAltIcon,
+  BookOpenIcon,
+} from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "../widgets/layout";
 import { FeatureCard, TeamCard } from "../widgets/cards";
 import { featuresData, teamData, contactData } from "../data";
@@ -19,27 +24,22 @@ export function Home() {
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('/img/womes_background.jpg')] bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full max-w-full object-cover bg-[url('/img/womes_background.jpg')] bg-cover bg-center" />
         <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
-        <div className="max-w-8xl container relative mx-auto">
-          <div className="flex flex-wrap items-center">
-            <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
+        <div className="max-w-7xl container relative mx-auto px-4 text-center">
+          <div className="flex flex-wrap items-center justify-center">
+            <div className="w-full px-4 text-center lg:w-8/12">
               <Typography
                 variant="h1"
                 color="green"
-                className="mb-6 font-extrabold"
-                style={
-                  {
-                    // Soporte general de navegadores
-                  }
-                }
+                className="mb-6 font-extrabold text-4xl md:text-6xl"
               >
                 VitaEx Labs
               </Typography>
               <Typography
                 variant="lead"
                 color="white"
-                className="font-bold opacity-80"
+                className="font-bold opacity-80 text-lg md:text-xl"
                 style={{
                   WebkitTextStroke: "0.7px black",
                   textStroke: "0.7px black",
@@ -54,8 +54,7 @@ export function Home() {
         </div>
       </div>
 
-      {/*Arriba de features*/}
-
+      {/* Features Section */}
       <section className="-mt-32 bg-white px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -71,19 +70,19 @@ export function Home() {
               />
             ))}
           </div>
+          {/* Services Section */}
           <div className="mt-32 flex flex-wrap items-center">
-            <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
+            <div className="mx-auto w-full px-4 mb-8 md:mb-0 md:w-5/12">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-green-500 p-2 text-center shadow-lg">
                 <FingerPrintIcon className="h-8 w-8 text-white " />
               </div>
               <Typography
                 variant="h3"
-                className="mb-3 font-bold"
-                color="blue-gray"
+                className="mb-3 font-bold text-blue-gray-900 text-2xl"
               >
                 Servicios
               </Typography>
-              <Typography className="mb-8 font-normal text-gray-800">
+              <Typography className="mb-8 font-normal text-gray-800 text-lg">
                 Ofrecemos una variedad de productos y servicios enfocados en
                 prolongar la salud y mejorar la longevidad, incluyendo terapias
                 genéticas, suplementos personalizados y tratamientos
@@ -93,13 +92,13 @@ export function Home() {
                 Conoce más
               </Button>
             </div>
-            <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
+            <div className="mx-auto mt-12 w-full md:mt-0 md:w-4/12">
               <Card className="shadow-lg border bg-black rounded-lg">
                 <CardHeader floated={false} className="relative h-56">
                   <img
                     alt="Card Image"
                     src="/img/background_men.jpg"
-                    className="h-full w-full"
+                    className="h-full w-full object-cover"
                   />
                 </CardHeader>
                 <CardBody>
@@ -133,7 +132,8 @@ export function Home() {
           </div>
         </div>
       </section>
-      {/*Abajo de servicios*/}
+
+      {/* About Us Section */}
       <section className="bg-white px-4 pb-32 pt-16">
         {" "}
         {/* Espacio ajustado con pb-32 */}
@@ -142,15 +142,33 @@ export function Home() {
             variant="h3"
             className="mb-3 font-bold text-blue-gray-900"
           >
-            Nuestra Misión, Visión y Reseña Histórica
+            Conoce más sobre nosotros
           </Typography>
-          <Typography variant="h5" color="blue-gray" className="mb-8">
-            <span className="font-extrabold text-green-500">VitaEx Labs</span>{" "}
-            combina "Vita" (vida en latín) con "Ex" para expansión, sugiriendo
-            la prolongación de la vida.
+          <Typography variant="h4" color="blue-gray" className="mb-8">
+            <span className="font-extrabold text-2xl text-green-500">
+              Significado de VitaEx Labs
+            </span>{" "}
+            <br />
+            <span className=" text-xl">
+              Combina{" "}
+              <span className="font-extrabold text-2xl text-green-500">
+                "Vita"
+              </span>{" "}
+              (vida en latín) con{" "}
+              <span className="font-extrabold text-2xl text-green-500">
+                "Ex"
+              </span>{" "}
+              para expansión, sugiriendo la prolongación de la vida.
+            </span>{" "}
+          </Typography>
+
+          <Typography variant="h4" color="blue-gray" className="mb-4">
+            <span className="font-extrabold text-2xl text-green-500">
+              Nuestro slogan
+            </span>{" "}
           </Typography>
           <Typography
-            variant="h6"
+            variant="h5"
             className="italic text-gray-600 mb-8"
             color="blue-gray"
           >
@@ -158,12 +176,16 @@ export function Home() {
           </Typography>
 
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-2">
-            <Card className="shadow-lg border bg-green-50 rounded-lg">
+            <Card className="shadow-lg border bg-black rounded-lg">
               <CardBody>
-                <Typography variant="h4" className="font-bold text-green-700">
-                  Misión
-                </Typography>
-                <Typography className="mt-4 text-gray-600">
+                <div className="mb-4 flex items-center justify-center">
+                  {/* Icono para la Misión */}
+                  <BeakerIcon className="w-6 h-6 text-green-500 mr-2" />
+                  <Typography variant="h4" className="font-bold text-green-700">
+                    Misión
+                  </Typography>
+                </div>
+                <Typography className="mt-4 text-white">
                   En VitaEx Labs, nuestra misión es prolongar y mejorar la
                   calidad de vida de las personas a través de la investigación
                   científica avanzada en biotecnología y longevidad. Nos
@@ -173,12 +195,16 @@ export function Home() {
                 </Typography>
               </CardBody>
             </Card>
-            <Card className="shadow-lg border bg-green-50 rounded-lg">
+            <Card className="shadow-lg border bg-black rounded-lg">
               <CardBody>
-                <Typography variant="h4" className="font-bold text-green-700">
-                  Visión
-                </Typography>
-                <Typography className="mt-4 text-gray-600">
+                <div className="mb-4 flex items-center justify-center">
+                  {/* Icono para la Visión */}
+                  <GlobeAltIcon className="w-6 h-6 text-green-500 mr-2" />
+                  <Typography variant="h4" className="font-bold text-green-700">
+                    Visión
+                  </Typography>
+                </div>
+                <Typography className="mt-4 text-white">
                   Ser líderes mundiales en la investigación y aplicación de
                   tecnologías de longevidad, revolucionando la forma en que las
                   personas experimentan el envejecimiento y mejorando
@@ -191,13 +217,17 @@ export function Home() {
           </div>
 
           {/* Nueva Card para la Reseña Histórica */}
-          <div className="mt-10">
-            <Card className="shadow-lg border bg-green-50 rounded-lg">
+          <div className="mt-9">
+            <Card className="shadow-lg border bg-black rounded-lg">
               <CardBody>
-                <Typography variant="h4" className="font-bold text-green-700">
-                  Reseña Histórica
-                </Typography>
-                <Typography className="mt-4 text-gray-600">
+                <div className="mb-4 flex items-center justify-center">
+                  {/* Icono para la Reseña Histórica */}
+                  <BookOpenIcon className="w-6 h-6 text-green-500 mr-2" />
+                  <Typography variant="h4" className="font-bold text-green-700">
+                    Reseña Histórica
+                  </Typography>
+                </div>
+                <Typography className="mt-4 text-white">
                   VitaEx Labs fue fundada en el año 2024 por Esteban López, un
                   visionario apasionado por la biotecnología y la salud. La
                   empresa nació como respuesta a la creciente demanda por
@@ -292,7 +322,7 @@ export function Home() {
           </PageTitle>
 
           <form className="mx-auto w-full mt-12 lg:w-5/12">
-            <div className="mb-8 flex gap-8">
+            <div className="mb-8 flex flex-wrap gap-4">
               <Input variant="outlined" size="lg" label="Nombre y Apellido" />
               <Input variant="outlined" size="lg" label="Dirección de correo" />
             </div>
